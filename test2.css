@@ -1,0 +1,738 @@
+@import url('https://fonts.googleapis.com/css2?family=Angkor&family=Arimo:ital,wght@0,400..700;1,400..700&family=Battambang&family=Bayon&family=Bebas+Neue&family=Catamaran:wght@100..900&family=Comme:wght@100..900&family=Concert+One&family=Gothic+A1:wght@500&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kdam+Thmor+Pro&family=Koulen&family=Lobster&family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans+Khmer:wght@100..900&family=Noto+Serif+Khmer:wght@100..900&family=Oswald:wght@200..700&family=Poppins:wght@400;500&family=Radio+Canada:ital,wght@0,300..700;1,300..700&family=Roboto+Slab:wght@100..900&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Angkor&family=Arimo:ital,wght@0,400..700;1,400..700&family=Battambang:wght@100;300;400;700;900&family=Bayon&family=Bebas+Neue&family=Catamaran:wght@100..900&family=Comme:wght@100..900&family=Concert+One&family=Dancing+Script:wght@400..700&family=Gothic+A1:wght@500&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kdam+Thmor+Pro&family=Koulen&family=Lobster&family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans+Khmer:wght@100..900&family=Noto+Serif+Khmer:wght@100..900&family=Oswald:wght@200..700&family=Poppins:wght@400;500&family=Radio+Canada:ital,wght@0,300..700;1,300..700&family=Roboto+Slab:wght@100..900&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comme", sans-serif;
+    font-optical-sizing: auto;
+}
+.header{
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    padding: 0 40px;
+    display: flex;
+    box-shadow: 1px 2px 8px rgb(144, 143, 143);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+.header .logo{
+    width: 25%;
+    height: 100%;
+    /* background-color: burlywood; */
+    align-items: center;
+    display: flex;
+}
+.header .menu{
+    width: 50%;
+    height: 100%;
+    /* background-color: chartreuse; */
+    align-items: center;
+    display: flex;
+}
+.header .icons{
+    width: 25%;
+    height: 100%;
+    /* background-color: chocolate; */
+    align-items: center;
+    display: flex;
+    justify-content: end;
+}
+/* =================== Menu ============== */
+.header .menu ul {
+    display: flex;
+    list-style-type: none;
+}
+.menu ul li{
+    margin-right: 30px;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    position: relative;
+}
+.menu ul li a::before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    background-color: chartreuse;
+    height: 2px;
+    bottom: -7px;
+    right: 50%;
+    transition: all 0.1s;
+    
+}
+.menu ul li a::after{
+    position: absolute;
+    content: "";
+    width: 0%;
+    background-color: chartreuse;
+    height: 2px;
+    bottom: -7px;
+    left: 50%;
+    transition: all 0.1s;
+}
+.menu ul li a:hover::before{
+    width: 50%; 
+    transition: all 0.1s;
+}
+.menu ul li a:hover::after{
+    width: 50%;
+    transition: all 0.1s;
+}
+
+/* ============= ICONS ============= */
+.header .icons ul{
+    display: flex;
+}
+.header .icons ul li{
+    list-style-type: none;
+    margin-left: 30px;
+    position: relative;
+}
+.header .icons ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.icons ul li #taga{
+    font-size: 15px;
+    color: rgba(128, 128, 128, 0.75);
+}
+.icons ul li span{
+    position: absolute;
+    width: 21px;
+    top: -13px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    padding: 0px 5px;
+    clip-path: circle(50% at 50% 50%);
+}
+/* ================ Banner========== */
+.banner{
+    width: 100%;
+    height: 100vh;
+    /* background-color: blueviolet; */
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.banner .ban-left{
+    width: 49%;
+    height: 100%;
+    /* background-co : chartreuse; */
+    background-image: url("./Picture_Shop/categories/category-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 15rem 5rem;
+
+}
+.ban-left h1{
+    margin-bottom: 20px;
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    font-size: 60px;
+    /* font-style: ; */
+}
+.ban-left p{
+    margin-bottom: 20px;
+    font-family: "Dancing Script", cursive;
+    font-size: 25px;
+}
+.ban-left a{
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+    padding: 8px 0px;
+    border-bottom: 2px solid red;
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+}
+.banner .ban-right{
+    width: 50%;
+    height: 100%;
+    /* background-color: burlywood; */
+}
+.banner .ban-right .ban-ri-box{
+    width: 100%;
+    height: 49%;
+    /* background-color: chocolate; */
+    margin-bottom: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+.ban-ri-box .box1{
+    width: 49%;
+    height: 100%;
+    /* background-color: cornflowerblue; */
+    position: relative;
+}
+.ban-ri-box .box1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.text-up{
+    position: absolute;
+    /* background-color: rgb(255, 0, 212); */
+    top: 40%;
+    left: 10%;
+}
+.text-up h2{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.text-up p{
+    margin-bottom: 15px;
+}
+.text-up a{
+    color: black;
+    padding: 8px 0px;
+    border-bottom: 2px solid red;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px; 
+}
+/* =========== Product head */
+.pro-head{
+    width: 85%;
+    height: 90px;
+    /* background-color: blueviolet; */
+    margin: 0px auto;
+    margin-top: 20px;
+    display: flex;
+}
+.pro-head .pro-head1{
+    width: 50%;
+    height: 100%;
+    /* background-color: burlywood; */
+    display: flex;
+    align-items: center;
+}
+.pro-head1 h2{
+    position: relative;
+}
+.pro-head1 h2::before{
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: red;
+    bottom: -5px;
+}
+.pro-head .pro-head2{
+    width: 50%;
+    height: 100%;
+    /* background-color: rgb(219, 222, 135); */
+    display: flex;
+    align-items: center;
+}
+.pro-head2 ul{
+    display: flex;
+}
+.pro-head2 ul li{
+    list-style-type: none;
+    margin-left: 33px;
+    position: relative;
+}
+.pro-head2 ul li a{
+    text-decoration: none;
+    color: rgb(47, 47, 47);
+}
+#line::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    bottom: -5px;
+}
+/* ========== Product */
+.product{
+    width: 85%;
+    height: 450px;
+    /* background-color: blueviolet; */
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.product .item{
+    width: 23%;
+    height: 100%;
+    /* background-color: deeppink; */
+}
+.product .item .image{
+    width: 100%;
+    height: 80%;
+    /* background-color: burlywood; */
+    position: relative;
+    overflow: hidden;
+    
+}
+.item .image span{
+    position: absolute;
+    width: 50px;
+    background-color: rgb(11, 245, 11);
+    padding: 5px 4px;
+    left: 10px;
+    top: 10px;
+    text-align: center;
+    color: white;
+}
+
+.item .image .icns{
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    /* background-color: rgb(226, 43, 43); */
+    bottom: -30%;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    transition: all 0.5s;
+
+}
+
+.item .image .icns .box i{
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    background-color: white;
+    margin-right: 20px;
+    clip-path: circle(50% at 50% 50%);
+    text-align: center;
+    padding: 16px 15px;
+    
+}
+.item:hover .icns{
+    visibility: visible;
+    bottom: 0;
+    transition: all 0.5s;
+}
+.item .image .icns .box i:hover{
+    transform: rotate(360deg);
+    transition: all 1s;
+    background-color: red;
+    color: white;
+}
+.product .item .text{
+    width: 100%;
+    height: 20%;
+    /* background-color: chartreuse; */
+    padding: 20px 0px;
+    text-align: center;
+}
+.item .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.item .text p{
+    font-size: 15px;
+}
+.item .text span i{
+    font-size: 10px;
+    margin-bottom: 8px;
+    color: rgb(208, 181, 3);
+}
+/* =========== Collection======== */
+.collection{
+    width: 100%;
+    height: 500px;
+    background-color: blueviolet;
+    margin: 40px 0px;
+    position: relative;
+}
+.collection img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.collection .text{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    /* background-color: burlywood; */
+    top: 25%;
+    left: 25%;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    
+    
+}
+.collection .text .text-box{
+    width: 70%;
+    height: 100%;
+    /* background-color: blue; */
+    margin: 0 auto;
+    padding: 3rem 0px;
+    animation-name: ban-text;
+    animation-duration: 6s;
+    /* animation-timeline: 10s;/ */
+    animation-iteration-count: infinite;
+    position: absolute;
+}
+@keyframes ban-text{
+    0%{transform: translateX(0);}
+    50%{transform: translate(130%);}
+    100%{transform: translateX(128%);}
+}
+.collection .text .text-box h3{
+    color: red;
+    margin-bottom: 10px;
+}
+.collection .text .text-box h1{
+    text-transform: capitalize;
+    font-family: "Dancing Script", cursive;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.collection .text .text-box p{
+    position: relative;
+}
+.collection .text .text-box p::before{
+    position: absolute;
+    content: "";
+    width: 95px;
+    height: 3px;
+    background-color: red;
+    bottom: -5px;
+    
+}
+/* =============== BLOG */
+.blog{
+    width: 80%;
+    height: 90vh;
+    /* background-color: chocolate; */
+    margin: 0 auto;
+    display: flex;
+}
+.blog .blog1{
+    width: 34%;
+    height: 100%;
+    /* background-color: blueviolet; */
+}
+.blog .blog1 .blog1-box1{
+    width: 100%;
+    height: 30%;
+    /* background-color: rgba(220, 210, 20, 0.949); */
+    display: flex;
+    padding: 20px 0px;
+}
+.blog1-box1 .blog1-box1-pic{
+    width: 40%;
+    height: 100%;
+    /* background-color: darksalmon; */
+    margin: 0px 30px 0px 0px;
+}
+.blog1-box1-pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.blog1-box1 .blog1-box1-text{
+    width: 60%;
+    height: 100%;
+    /* background-color: cornflowerblue; */
+}
+/* ======= Discount ====== */
+.discount{
+    width: 80%;
+    height: 60vh;
+    background-color: blueviolet;
+    margin: 30px auto;
+    display: flex;
+    text-align: center;
+}
+.discount .dis-left{
+    width: 50%;
+    height: 100%;
+    background-color: burlywood;
+}
+.dis-left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.discount .dis-right{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(212, 210, 208);
+   
+}
+.dis-right .circle{
+    margin: 40px auto;
+    width: 32%;
+    height: 45%;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+}
+.dis-right .circle p{
+    font-size: 15px;
+    margin-bottom: 5rem;
+}
+#tagH1{
+    width: 500px;
+    position: absolute;
+    /* background-color: aquamarine; */
+    top: 33%;
+    left: -95%;
+    font-size: 40px;
+    font-family: "Dancing Script", cursive;
+    color: red;
+    font-weight: bold;
+}
+.discount h5{
+    width: 90px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-bottom: 5px solid red !important;
+}
+/* ======= Payment===== */
+.payment{
+    width: 80%;
+    height: 100px;
+    /* background-color: burlywood; */
+    margin: 0 auto;
+    display: flex;
+}
+.payment .box-pay{
+    width: 25%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+}
+.payment .box-pay .pay-icon{
+    width: 30%;
+    height: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-pay .pay-icon i{
+    font-size: 40px;
+}
+.payment .box-pay .pay-text{
+    width: 70%;
+    height: 100%;
+    /* background-color: rgb(255, 127, 127); */
+    padding: 25px 0px;
+}
+/* ======= Instargram */
+.instagram{
+    width: 100%;
+    height: 350px;
+    background-color: chartreuse;
+    margin: 40px 0px;
+    display: flex;
+}
+.instagram .box-ig{
+    width: 16.66%;
+    height: 100%;
+    background-color: chocolate;
+    position: relative;
+}
+.box-ig img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.box-ig .ig{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.832);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: ease-in 0.2s;
+    
+}
+.ig .div{
+    /* background-color: aqua; */
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+   
+}
+.box-ig:hover .ig{
+   opacity: 1;
+   transition: ease-in 0.2s;
+    
+}
+/* =============== footer */
+.footer{
+    width: 100%;
+    height: 300px;
+    /* background-color: blueviolet; */
+}
+.footer .foot1{
+    width: 100%;
+    height: 80%;
+    /* background-color: burlywood; */
+    padding: 0 7rem;
+    display: flex;
+}
+.foot1 .foot-box1{
+    width: 30%;
+    height: 100%;
+    /* background-color: aqua; */
+    padding: 20px 0px;
+}
+.foot-box1 img{
+    margin-bottom: 20px;
+}
+.foot-box1 p{
+    margin-bottom: 20px;
+    color: rgb(65, 65, 65);
+}
+.foot1 .foot-box2{
+    width: 20%;
+    height: 100%;
+    /* background-color: rgb(255, 0, 0); */
+    padding: 20px 0px;
+}
+
+.foot1 .foot-box3{
+    width: 20%;
+    height: 100%;
+    /* background-color: rgb(255, 242, 0); */
+    padding: 20px 0px;
+}
+.foot-box2 ul li,.foot-box3 ul li{
+    list-style-type: none;
+    margin-top: 18px;
+}
+.foot-box2 ul li a,.foot-box3 ul li a{
+    text-decoration: none;
+    color: rgb(65, 65, 65);
+}
+.foot1 .foot-box4{
+    width: 30%;
+    height: 100%;
+    /* background-color: aqua; */
+    padding: 20px 0px;
+}
+.foot-box4 form{
+    width: 100%;
+    height: 20%;
+    /* background-color: blueviolet; */
+    position: relative;
+    margin: 20px 0px 60px 0px;
+}
+.foot-box4 form input[type="email"]{
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 25px;
+    outline: none;
+    border: 0.5px solid rgb(173, 172, 172);
+    font-size: 15px;
+
+}
+
+.foot-box4 form button[type="button"]{
+    width: 120px;
+    padding: 15px 0px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    right: 1%;
+    top: 2%;
+}
+.foot-box4 span{
+    
+    width: 100px;
+    padding: 13px 14px;
+    background-color: rgb(225,225,225);
+    border-radius: 50%;
+}
+
+.footer .foot2{
+    width: 80%;
+    height: 20%;
+    margin: 0 auto;
+    /* background-color: chocolate;
+     */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-top: 0.5px solid rgb(225,225,225);
+}
+/* =============== SHOP ====================== */
+.home{
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 40px;
+    /* background-color: blueviolet; */
+   
+}
+.home ul{
+    display: flex;
+   
+}
+.home ul li {
+    list-style-type: none;
+    margin-right: 10px;
+}
+.home ul li a{
+    text-decoration: none;
+    color: black;
+}
+/* ======== Catecories =========== */
+.categories{
+    width: 80%;
+    height: auto;
+    padding: 20px 0px;
+    background-color: blueviolet;
+    margin: 0 auto;
+    display: flex;
+}
+.categories .cate1{
+    width: 25%;
+    height: auto;
+    background-color: blue;
+}
+.cate1 ul li{
+    list-style-type: none;
+    padding: 15px 0px;
+    border-bottom: 1px solid rgb(140, 137, 137);
+    
+}
+
+.cate1 ul li a{
+    color: white;
+    text-decoration: none;
+    margin-right: 13rem;
+    
+}
+.categories .product{
+    width: 75%;
+    height: auto;
+    background-color: burlywood;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.categories .product .item{
+    width: 30%;
+    height: auto;
+}
